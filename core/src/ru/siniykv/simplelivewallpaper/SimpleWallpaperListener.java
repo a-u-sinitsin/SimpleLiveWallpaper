@@ -60,16 +60,17 @@ public class SimpleWallpaperListener implements ApplicationListener {
 
     @Override
     public void pause() {
-
+        System.out.println("pause");
     }
 
     @Override
     public void resume() {
-
+        System.out.println("resume");
     }
 
     @Override
     public void dispose() {
+        System.out.println("dispose");
         batch.dispose();
         texture.dispose();
     }

@@ -1,15 +1,9 @@
 package ru.siniykv.simplelivewallpaper;
 
-import android.util.Log;
-
 import com.badlogic.gdx.ApplicationListener;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 import com.badlogic.gdx.backends.android.AndroidLiveWallpaperService;
 import com.badlogic.gdx.backends.android.AndroidWallpaperListener;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class SimpleLiveWallpaper extends AndroidLiveWallpaperService {
 
@@ -24,9 +18,6 @@ public class SimpleLiveWallpaper extends AndroidLiveWallpaperService {
         config.useCompass = false;
         config.useWakelock = false;
         config.useAccelerometer = false;
-
-        System.out.print("viewWidth - ");
-        System.out.println(viewWidth);
 
         final ApplicationListener listener = new WallpaperListener();
 
