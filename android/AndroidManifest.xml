@@ -28,7 +28,7 @@
                 android:resource="@xml/simplewallpaper" />
         </service>
 
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
     </application>
 
 </manifest>
