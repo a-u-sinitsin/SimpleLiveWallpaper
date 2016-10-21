@@ -1,5 +1,7 @@
 package ru.siniykv.simplelivewallpaper;
 
+import android.util.Log;
+
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
@@ -11,7 +13,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class SimpleLiveWallpaper extends AndroidLiveWallpaperService {
 
-    public static float pixelOffset = 0;
+    public static float Offset = 0;
 
     @Override
     public void onCreateApplication() {
@@ -37,8 +39,8 @@ public class SimpleLiveWallpaper extends AndroidLiveWallpaperService {
         public void create() {
             super.resolver = new Resolver() {
                 @Override
-                public float getxPixelOffset() {
-                    return pixelOffset;
+                public float getxOffset() {
+                    return Offset;
                 }
             };
 
@@ -47,7 +49,7 @@ public class SimpleLiveWallpaper extends AndroidLiveWallpaperService {
 
         @Override
         public void offsetChange(float xOffset, float yOffset, float xOffsetStep, float yOffsetStep, int xPixelOffset, int yPixelOffset) {
-            pixelOffset = xPixelOffset;
+            Offset = xOffset;
 
         }
 
